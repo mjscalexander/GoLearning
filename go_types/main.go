@@ -34,7 +34,7 @@ func main(){
 	
 	fmt.Println("x is ", x)
 	fmt.Println("my first pointer is ", myFirstPointer)
-	
+
 	// the '*' before the variable allow you to access the value at 
 	// the actual address and change it if you like.
 	*myFirstPointer = 15
