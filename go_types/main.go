@@ -42,8 +42,23 @@ func main(){
 	changeValueOfPointer(&x)
 
 	fmt.Println("after function call, x is now", x)
-}	
+
+	intMap := make(map[string]int)
+
+	intMap["one"]   = 1
+	intMap["two"]   = 2
+	intMap["three"] = 3
+	intMap["four"]  = 4
+	intMap["five"]  = 5
+
+	for key, value := range intMap {
+		fmt.Println(key, value)
+	}
+
+
+}
 
 func changeValueOfPointer(num *int) {
 	*num = 25
 }
+
