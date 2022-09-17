@@ -51,9 +51,28 @@ func main(){
 	intMap["four"]  = 4
 	intMap["five"]  = 5
 
+	delete(intMap, "four")	
+	 
+	el, ok := intMap["four"]
+
+	if ok {
+		fmt.Println(el, "is in map")
+	} else {
+		fmt.Println("el not in map")
+	}
+    
+	intMap["two"] = 4
+
+	
+
+
+
 	for key, value := range intMap {
 		fmt.Println(key, value)
 	}
+
+	
+
 
 
 }
