@@ -2,13 +2,26 @@ package main
 
 import (
 	"fmt"
-  "encoding/json"
 )
 
 func main() {
-  fmt.Println("Hello World")
-  mstr, _ := json.Marshal("testing 123")
-  err := json.Unmarshal(mstr)
+  
+  
+  
+  uniqCache()
+
+  
 
 
+
+}
+
+func uniqCache() {
+  var newlst []string
+
+  func() {
+    newlst = append(newlst, "34")
+    fmt.Println(newlst)
+
+  }()
 }
