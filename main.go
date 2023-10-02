@@ -5,13 +5,15 @@ import (
   "slices"
 )
 
-func main() {  
-  randint := "22"
-  flg, cache := uniqCache(randint)
-  if flg {
-    fmt.Println("Id in list", cache)
-  } else {
-    fmt.Println("Id not in list, adding it...", cache)
+func main() {
+  lst := []string{"22", "1", "23","1", "25"}
+  for _, num := range lst {
+    flg, cache := uniqCache(num)
+    if flg {
+      fmt.Println("Id in list", cache)
+    } else {
+      fmt.Println("Id not in list, adding it...", cache)
+    }
   }
 }
 
