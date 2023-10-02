@@ -6,7 +6,7 @@ import (
 )
 
 func main() {  
-  randint := "21"
+  randint := "22"
   flg, lst := uniqCache(randint)
   if flg {
     fmt.Println("Id in list", lst)
@@ -16,7 +16,7 @@ func main() {
 
 }
 
-func uniqCache(str string) bool, []string {
+func uniqCache(str string) (bool, []string) {
   newlist := []string{"21"}
   var flg bool
   flg = false
@@ -25,7 +25,6 @@ func uniqCache(str string) bool, []string {
       flg = true
       } else {
         newlist = append(newlist, str)
-        flg = false
       }
   }()
 
