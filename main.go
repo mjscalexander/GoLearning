@@ -7,13 +7,12 @@ import (
 
 func main() {  
   randint := "22"
-  flg, lst := uniqCache(randint)
+  flg, cache := uniqCache(randint)
   if flg {
-    fmt.Println("Id in list", lst)
+    fmt.Println("Id in list", cache)
   } else {
-    fmt.Println("Id not in list, adding it...", lst)
+    fmt.Println("Id not in list, adding it...", cache)
   }
-
 }
 
 func uniqCache(str string) (bool, []string) {
@@ -21,12 +20,11 @@ func uniqCache(str string) (bool, []string) {
   var flg bool
   flg = false
   func() {
-    if slices.Contains(newlist,str) == true {
-      flg = true
-      } else {
+    if slices.Contains(newlist,str) != true {
         newlist = append(newlist, str)
+      } else {
+        flg = true
       }
   }()
-
   return flg, newlist
 }
