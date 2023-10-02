@@ -2,26 +2,32 @@ package main
 
 import (
 	"fmt"
+  "slices"
 )
 
-func main() {
-  
-  
-  
-  uniqCache()
-
-  
-
-
+func main() {  
+  randint := "21"
+  flg, lst := uniqCache(randint)
+  if flg {
+    fmt.Println("Id in list", lst)
+  } else {
+    fmt.Println("Id not in list, adding it...", lst)
+  }
 
 }
 
-func uniqCache() {
-  var newlst []string
-
+func uniqCache(str string) bool, []string {
+  newlist := []string{"21"}
+  var flg bool
+  flg = false
   func() {
-    newlst = append(newlst, "34")
-    fmt.Println(newlst)
-
+    if slices.Contains(newlist,str) == true {
+      flg = true
+      } else {
+        newlist = append(newlist, str)
+        flg = false
+      }
   }()
+
+  return flg, newlist
 }
