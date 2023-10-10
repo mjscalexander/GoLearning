@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	ninja1, ninja2 := make(chan string), make(chan string)
@@ -13,10 +15,14 @@ func main() {
 		fmt.Println(message)
 	case message := <-ninja2:
 		fmt.Println(message)
+	default:
+		fmt.Println("Neither was chosen")
 	}
+	roughlyFair()
 }
 
 func captainElect(ninja chan string, message string) {
+	
 	ninja <- message
 }
 
