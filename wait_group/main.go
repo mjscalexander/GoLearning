@@ -22,6 +22,7 @@ import (
 // 	fmt.Println("Finished executing my go program")
 // }
 
+// real world example
 var urls = []string{
 	"https://twitter.com",
 	"https://www.openpolicyagent.org/",
